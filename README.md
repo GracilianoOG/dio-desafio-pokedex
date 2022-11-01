@@ -8,15 +8,15 @@ Este projeto é baseado em uma *Pokedex*, que mostra todos os Pokemons da primei
 
 Este projeto foi feito seguindo os cursos **Criando um Projeto com HTML/CSS para Listagem de Pokémon** e **Dominando o Protocolo HTTP e Integrando com a PokeAPI**.
 
-* CSS
+* **CSS**
     * A importância do `normalize CSS`
     * O conceito `Mobile First`
     * Os displays `Grid Layout` e `Flexbox`
-* Javascript
+* **Javascript**
     * Função `map()` para criar uma lista a partir de outra lista de forma eficiente
     * Função `join()` para transformar listas em strings
     * Uso da `fetch API` para efetuar as requisições
-* Requisição HTTP e a sua importância
+* **Requisição HTTP**
     * `URL` como `Endereço` / `Caminho`
     * `Request Methods` que pode ser `POST`, `GET`, `PUT` ou `DELETE`, além de vários outros tipos
     * `Path Params` e `Query Strings`
@@ -25,6 +25,8 @@ Este projeto foi feito seguindo os cursos **Criando um Projeto com HTML/CSS para
     * `Status Code` que indica o que houve com a requisição
 
 ## 🖼️ Imagem do site
+
+Veja como o site ficou, ao vivo, [clicando aqui](https://gracilianoog.github.io/dio-desafio-pokedex/ "Visitar o site da Pokedex").
 
 ![Imagem do site com alguns Pokemons](./assets/images/index-screenshot.png)
 
