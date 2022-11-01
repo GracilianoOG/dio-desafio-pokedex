@@ -37,5 +37,6 @@ Este projeto faz parte da trilha de Javascript do bootcamp **NTT DATA Diversidad
 ## 🔗 Links
 
 * [🔍 Digital Innovation One](https://www.dio.me/)
-* [🔍 Pokeapi](https://pokeapi.co/)
 * [🔍 Fetch API | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+* [🔍 Pokeapi](https://pokeapi.co/)
+* [🔍 Repositório base do projeto](https://github.com/digitalinnovationone/js-developer-pokedex)
