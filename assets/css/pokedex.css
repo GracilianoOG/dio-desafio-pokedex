@@ -73,6 +73,12 @@
     font-size: .625rem;
     margin: .25rem 0;
     padding: .25rem .5rem;
+    transition: 300ms;
+}
+
+.pagination button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 @media screen and (min-width: 380px) {
