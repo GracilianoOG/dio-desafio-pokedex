@@ -1,7 +1,9 @@
 export class Pokemon {
-  name;
-  number;
-  type;
-  types = [];
-  photo;
+  constructor(name, number, type, types, photo) {
+    this.name = name;
+    this.number = number;
+    this.type = type;
+    this.types = types;
+    this.photo = photo;
+  }
 }
