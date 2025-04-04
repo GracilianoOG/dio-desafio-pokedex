@@ -1,24 +1,23 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    background-color: #F6F8FC;
+  background-color: #f6f8fc;
 }
 
 .content {
-    background-color: #FFF;
-    height: 100vh;
-    padding: 1rem;
-    width: 100vw;
+  background-color: #fff;
+  min-height: 100vh;
+  padding: 1rem;
+  width: 100vw;
 }
 
 @media screen and (min-width: 992px) {
-    .content {
-        border-radius: 1rem;
-        height: auto;
-        max-width: 992px;
-        margin: 1rem auto;
-    }
+  .content {
+    border-radius: 1rem;
+    max-width: 992px;
+    margin: 1rem auto;
+  }
 }
