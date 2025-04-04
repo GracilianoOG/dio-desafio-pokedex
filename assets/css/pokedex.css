@@ -87,18 +87,20 @@
 
 .pagination button {
   background-color: #6c79d6;
-  border: none;
+  border: 2px solid #6c79d6;
   border-radius: 1rem;
   color: #fff;
   font-size: 0.875rem;
   margin: 0.25rem 0;
   padding: 0.5rem 1.25rem;
-  transition: transform 300ms;
+  transition: transform 300ms, background-color 300ms;
 }
 
 .pagination button:hover {
+  background-color: #fff;
+  color: #6c79d6;
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.025);
 }
 
 @media screen and (min-width: 380px) {
