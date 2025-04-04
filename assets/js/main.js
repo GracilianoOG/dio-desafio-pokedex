@@ -48,6 +48,6 @@ const loadMorePokemons = () => {
   }
 };
 
-loadMoreButton.addEventListener("click", () => loadMorePokemons);
+loadMoreButton.addEventListener("click", loadMorePokemons);
 
 loadPokemonItens(offset, limit);
