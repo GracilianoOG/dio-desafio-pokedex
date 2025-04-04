@@ -26,12 +26,10 @@ const createPokemonElement = pokemon => {
 `;
 };
 
-const loadPokemonItens = (offset, limit) => {
-  pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-    pokemonList.innerHTML += pokemons
-      .map(pokemon => createPokemonElement(pokemon))
-      .join("");
-  });
+const loadPokemonItens = async (offset, limit) => {
+  const pokemons = (await pokeApi.getPokemons(offset, limit)) ?? [];
+  const pokemonCards = pokemons.map(pokemon => createPokemonElement(pokemon));
+  pokemonList.innerHTML += pokemonCards.join("");
 };
 
 const loadMorePokemons = () => {
