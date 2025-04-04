@@ -34,16 +34,16 @@ const loadPokemonItens = async (offset, limit) => {
 
 const loadMorePokemons = () => {
   offset += limit;
-
   const qtdRecordsNextPage = offset + limit;
 
-  if (qtdRecordsNextPage >= maxRecords) {
-    const newLimit = maxRecords - offset;
-    loadPokemonItens(offset, newLimit);
-    loadMoreButton.parentElement.removeChild(loadMoreButton);
-  } else {
+  if (qtdRecordsNextPage < maxRecords) {
     loadPokemonItens(offset, limit);
+    return;
   }
+
+  const newLimit = maxRecords - offset;
+  loadPokemonItens(offset, newLimit);
+  loadMoreButton.parentElement.removeChild(loadMoreButton);
 };
 
 loadMoreButton.addEventListener("click", loadMorePokemons);
