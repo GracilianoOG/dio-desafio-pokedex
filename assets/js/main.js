@@ -12,7 +12,7 @@ const createPokemonElement = pokemon => {
   return `
     <li class="pokemon ${type}">
       <span class="number">#${number}</span>
-      <span class="name">${name}</span>
+      <h2 class="name">${name}</h2>
       <div class="detail">
         <ol class="types">
           ${types
