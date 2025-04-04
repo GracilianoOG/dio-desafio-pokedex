@@ -2,21 +2,14 @@ import { Pokemon } from "./models/Pokemon.js";
 
 export const pokeApi = {};
 
-function convertPokeApiDetailToPokemon(pokeDetail) {
-  const pokemon = new Pokemon();
-  pokemon.name = pokeDetail.name;
-  pokemon.number = pokeDetail.id;
+const convertPokeApiDetailToPokemon = details => {
+  const { name, id, types, sprites } = details;
+  const typeNames = types.map(typeSlot => typeSlot.type.name);
+  const [type] = typeNames;
+  const photo = sprites.other.dream_world.front_default;
 
-  const types = pokeDetail.types.map(typeSlot => typeSlot.type.name);
-  const [type] = types;
-
-  pokemon.types = types;
-  pokemon.type = type;
-
-  pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
-
-  return pokemon;
-}
+  return new Pokemon(name, id, type, typeNames, photo);
+};
 
 pokeApi.getPokemonDetail = async pokemon => {
   const response = await fetch(pokemon.url);
