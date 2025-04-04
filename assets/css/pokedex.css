@@ -13,6 +13,7 @@
   flex-direction: column;
   margin: 0.5rem;
   padding: 1rem;
+  position: relative;
   transition: box-shadow 0.25s, transform 0.25s;
 }
 
@@ -22,10 +23,21 @@
 }
 
 .pokemon .number {
+  --size: 30px;
+  align-items: center;
+  background-color: #fff;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 13px;
   color: #000;
+  display: flex;
   font-size: 0.625rem;
-  opacity: 0.3;
-  text-align: right;
+  font-weight: 700;
+  height: var(--size);
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: var(--size);
 }
 
 .pokemon .name {
