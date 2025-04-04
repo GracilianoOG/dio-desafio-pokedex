@@ -18,10 +18,10 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
   return pokemon;
 }
 
-pokeApi.getPokemonDetail = pokemon => {
-  return fetch(pokemon.url)
-    .then(response => response.json())
-    .then(convertPokeApiDetailToPokemon);
+pokeApi.getPokemonDetail = async pokemon => {
+  const response = await fetch(pokemon.url);
+  const pokeDetail = await response.json();
+  return convertPokeApiDetailToPokemon(pokeDetail);
 };
 
 pokeApi.getPokemons = async (offset = 0, limit = 10) => {
