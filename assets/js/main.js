@@ -53,7 +53,8 @@ const loadMorePokemons = () => {
 
 loadMoreButton.addEventListener("click", loadMorePokemons);
 
-pokemonModal.addEventListener("click", () => {
+pokemonModal.addEventListener("click", e => {
+  if (e.target !== e.currentTarget) return;
   pokemonModal.classList.toggle("hidden");
 });
 
