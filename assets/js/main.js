@@ -20,7 +20,7 @@ const createPokemonElement = pokemon => {
             .join("")}
         </ol>
 
-        <img src="${photo}" alt="${name}">
+        <img loading="lazy" src="${photo}" alt="${name}">
       </div>
     </li>
 `;
