@@ -31,14 +31,14 @@ const loadPokemonItens = async (offset, limit) => {
   const pokemonCards = pokemons.map(pokemon => createPokemonElement(pokemon));
   pokemonList.innerHTML += pokemonCards.join("");
   loadMoreButton.disabled = false;
-  loadMoreButton.textContent = "Carregar Mais";
+  loadMoreButton.textContent = loadMoreButton.dataset.ready;
 };
 
 const loadMorePokemons = () => {
   offset += limit;
   const qtdRecordsNextPage = offset + limit;
   loadMoreButton.disabled = true;
-  loadMoreButton.textContent = "Carregando...";
+  loadMoreButton.textContent = loadMoreButton.dataset.loading;
 
   if (qtdRecordsNextPage < maxRecords) {
     loadPokemonItens(offset, limit);
