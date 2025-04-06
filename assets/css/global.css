@@ -16,7 +16,14 @@ body {
 
 .title {
   font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 2px;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.title span {
+  color: #e81b24;
 }
 
 .footer {
