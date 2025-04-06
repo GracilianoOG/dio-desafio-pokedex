@@ -27,8 +27,9 @@ body {
 }
 
 .footer {
+  background-color: #fff;
+  padding: 2rem;
   text-align: center;
-  margin: 5rem 0 1rem 0;
 }
 
 footer .link {
@@ -40,6 +41,6 @@ footer .link {
   .content {
     border-radius: 1rem;
     max-width: 992px;
-    margin: 1rem auto;
+    margin: 1rem auto 3rem auto;
   }
 }
