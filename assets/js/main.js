@@ -30,11 +30,15 @@ const loadPokemonItens = async (offset, limit) => {
   const pokemons = (await pokeApi.getPokemons(offset, limit)) ?? [];
   const pokemonCards = pokemons.map(pokemon => createPokemonElement(pokemon));
   pokemonList.innerHTML += pokemonCards.join("");
+  loadMoreButton.disabled = false;
+  loadMoreButton.textContent = "Carregar Mais";
 };
 
 const loadMorePokemons = () => {
   offset += limit;
   const qtdRecordsNextPage = offset + limit;
+  loadMoreButton.disabled = true;
+  loadMoreButton.textContent = "Carregando...";
 
   if (qtdRecordsNextPage < maxRecords) {
     loadPokemonItens(offset, limit);
