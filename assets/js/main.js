@@ -1,4 +1,4 @@
-import { pokeApi } from "./poke-api.js";
+import { pokeApi } from "./PokeApi.js";
 
 const pokemonList = document.getElementById("pokemonList");
 const loadMoreButton = document.getElementById("loadMoreButton");
