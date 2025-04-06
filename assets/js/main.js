@@ -1,6 +1,7 @@
 import { pokeApi } from "./PokeApi.js";
 
 const pokemonList = document.getElementById("pokemonList");
+const pokemonModal = document.getElementById("modal");
 const loadMoreButton = document.getElementById("loadMoreButton");
 const maxRecords = 151;
 const limit = 10;
@@ -51,5 +52,15 @@ const loadMorePokemons = () => {
 };
 
 loadMoreButton.addEventListener("click", loadMorePokemons);
+
+pokemonModal.addEventListener("click", () => {
+  pokemonModal.classList.toggle("hidden");
+});
+
+pokemonList.addEventListener("click", e => {
+  const card = e.target.closest(".pokemon");
+  if (!card) return;
+  pokemonModal.classList.toggle("hidden");
+});
 
 loadPokemonItens(offset, limit);
