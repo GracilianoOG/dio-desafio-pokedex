@@ -9,16 +9,42 @@
   width: 100%;
 }
 
-.panel {
+.modal .panel {
   background-color: #fff;
   border-radius: 15px;
+  color: #222438;
   min-height: 600px;
   overflow: hidden;
-  padding: 1rem;
+  padding: 2rem;
   position: relative;
-  width: 400px;
+  text-align: center;
+  width: 370px;
 }
 
-.hidden {
+.modal .header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal .details {
+  border-radius: 20px;
+  display: flex;
+  padding: 20px;
+  height: 250px;
+}
+
+.modal .photo {
+  border-radius: 25px;
+  display: block;
+  max-height: 100%;
+  width: 100%;
+}
+
+.modal .name {
+  text-transform: capitalize;
+}
+
+.modal.hidden {
   display: none;
 }
