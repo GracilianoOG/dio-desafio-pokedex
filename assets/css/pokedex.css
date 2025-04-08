@@ -82,6 +82,36 @@
   max-width: 100%;
 }
 
+.pokemon.selected {
+  height: 500px;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 300px;
+  z-index: 2;
+}
+
+.pokemon.selected img {
+  height: 250px;
+  left: 50%;
+  padding: 1rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 100%;
+}
+
+.pokemon.selected .number {
+  --size: 40px;
+  font-size: 0.825rem;
+}
+
+.pokemon.selected .types {
+  display: flex;
+  gap: 8px;
+}
+
 .pagination {
   align-items: center;
   display: flex;
