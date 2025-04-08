@@ -64,12 +64,14 @@ pokemonList.addEventListener("click", async e => {
 
   const url = `https://pokeapi.co/api/v2/pokemon/${card.dataset.id}`;
   const name = pokemonModal.querySelector("#modalName");
+  const number = pokemonModal.querySelector("#modalNumber");
   const photo = pokemonModal.querySelector("#modalPhoto");
   const photoWrapper = pokemonModal.querySelector("#modalPhotoWrapper");
   const types = pokemonModal.querySelector("#modalTypes");
   const pokemon = await pokeApi.getPokemonDetail({ url });
 
   name.textContent = pokemon.name;
+  number.textContent = `#${pokemon.number}`;
   photo.src = pokemon.photo;
   photoWrapper.classList.remove(photoWrapper.classList[1]);
   photoWrapper.classList.add(pokemon.type);
