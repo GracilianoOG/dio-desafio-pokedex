@@ -93,6 +93,7 @@
 }
 
 .pokemon.selected img {
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.35));
   height: 250px;
   left: 50%;
   padding: 1rem;
