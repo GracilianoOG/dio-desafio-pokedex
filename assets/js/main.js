@@ -11,7 +11,7 @@ const createPokemonElement = pokemon => {
   const { name, number, type, types, photo } = pokemon;
 
   return `
-    <li class="pokemon ${type}">
+    <li class="pokemon ${type}" data-id="${number}">
       <span class="number">#${number}</span>
       <h2 class="name">${name}</h2>
       <div class="detail">
@@ -58,9 +58,22 @@ pokemonModal.addEventListener("click", e => {
   pokemonModal.classList.toggle("hidden");
 });
 
-pokemonList.addEventListener("click", e => {
+pokemonList.addEventListener("click", async e => {
   const card = e.target.closest(".pokemon");
   if (!card) return;
+
+  const url = `https://pokeapi.co/api/v2/pokemon/${card.dataset.id}`;
+  const name = pokemonModal.querySelector("#modalName");
+  const photo = pokemonModal.querySelector("#modalPhoto");
+  const photoWrapper = pokemonModal.querySelector("#modalPhotoWrapper");
+  const types = pokemonModal.querySelector("#modalTypes");
+  const pokemon = await pokeApi.getPokemonDetail({ url });
+
+  name.textContent = pokemon.name;
+  photo.src = pokemon.photo;
+  photoWrapper.classList.remove(photoWrapper.classList[1]);
+  photoWrapper.classList.add(pokemon.type);
+
   pokemonModal.classList.toggle("hidden");
 });
 
