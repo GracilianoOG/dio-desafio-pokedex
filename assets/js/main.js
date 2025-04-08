@@ -61,6 +61,10 @@ pokemonModal.addEventListener("click", e => {
 pokemonList.addEventListener("click", e => {
   const card = e.target.closest(".pokemon");
   if (!card) return;
+  const selectedCard = pokemonList.querySelector(
+    `.selected:not([data-id="${card.dataset.id}"])`
+  );
+  if (selectedCard) selectedCard.classList.remove("selected");
   card.classList.toggle("selected");
 });
 
