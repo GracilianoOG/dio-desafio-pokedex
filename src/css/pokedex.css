@@ -28,17 +28,17 @@
 
 .pokemon:hover,
 .pokemon:focus {
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 12px var(--color-card-shadow);
   transform: scale(1.05);
 }
 
 .pokemon .number {
   --size: 30px;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-bottom-left-radius: 20px;
   border-top-right-radius: 13px;
-  color: #000;
+  color: var(--color-black);
   display: flex;
   font-size: 0.625rem;
   font-weight: 700;
@@ -51,11 +51,11 @@
 }
 
 .pokemon .name {
-  color: #fff;
+  color: var(--color-white);
   font-size: 1.5rem;
   margin-bottom: 0.6rem;
   text-transform: capitalize;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
+  text-shadow: 2px 2px 5px var(--color-name-shadow);
 }
 
 .pokemon .detail {
@@ -73,7 +73,7 @@
 
 .pokemon .detail .types .type {
   border-radius: 1rem;
-  color: #fff;
+  color: var(--color-white);
   filter: brightness(1.1);
   font-size: 0.875rem;
   margin: 0.25rem 0;
@@ -100,7 +100,7 @@
 .pokemon.selected img {
   animation: appear 0.8s;
   animation-play-state: running;
-  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(10px 10px 5px var(--color-poke-shadow));
   height: 250px;
   left: 50%;
   padding: 1rem;
@@ -130,10 +130,10 @@
 }
 
 .pagination button {
-  background-color: #6c79d6;
-  border: 2px solid #6c79d6;
+  background-color: var(--color-purple);
+  border: 2px solid var(--color-purple);
   border-radius: 1rem;
-  color: #fff;
+  color: var(--color-white);
   font-size: 0.875rem;
   margin: 0.25rem 0;
   padding: 0.5rem 1.25rem;
@@ -142,8 +142,8 @@
 
 .pagination button:hover,
 .pagination button:focus {
-  background-color: #fff;
-  color: #6c79d6;
+  background-color: var(--color-white);
+  color: var(--color-purple);
   cursor: pointer;
   transform: scale(1.025);
 }
