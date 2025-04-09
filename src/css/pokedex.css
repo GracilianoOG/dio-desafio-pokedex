@@ -8,7 +8,7 @@
 }
 
 .pokemon {
-  background-image: url("../images/pokeball-card.svg");
+  background-image: url("../assets/images/pokeball-card.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
