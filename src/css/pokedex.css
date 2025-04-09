@@ -82,7 +82,6 @@
 }
 
 .pokemon .detail img {
-  align-self: flex-end;
   height: 70px;
   max-width: 100%;
 }
