@@ -1,15 +1,50 @@
+:root {
+  /* Solid colors */
+  --color-black: #000;
+  --color-white: #fff;
+  --color-purple: #6c79d6;
+
+  /* Element colors */
+  --color-body-bg: #be202f;
+  --color-highlight: #e81b24;
+  --color-content-shadow: rgba(0, 0, 0, 0.15);
+  --color-card-shadow: rgba(0, 0, 0, 0.25);
+  --color-name-shadow: rgba(0, 0, 0, 0.35);
+  --color-poke-shadow: rgba(0, 0, 0, 0.35);
+
+  /* Pokémon colors */
+  --color-bug: #a8b720;
+  --color-dark: #725847;
+  --color-dragon: #6f38f6;
+  --color-electric: #f7cf2e;
+  --color-fire: #ee7f30;
+  --color-fighting: #bf3029;
+  --color-flying: #a98ff0;
+  --color-fairy: #f9aec7;
+  --color-ghost: #6e5896;
+  --color-grass: #77c850;
+  --color-ground: #dfbf69;
+  --color-ice: #98d5d7;
+  --color-normal: #a6a877;
+  --color-poison: #a040a0;
+  --color-psychic: #f65687;
+  --color-rock: #b8a137;
+  --color-steel: #b9b7cf;
+  --color-water: #678fee;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
 body {
-  background-color: #be202f;
+  background-color: var(--color-body-bg);
 }
 
 .content {
-  background-color: #fff;
-  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-white);
+  box-shadow: 0 0 25px 10px var(--color-content-shadow);
   min-height: 100vh;
   padding: 1rem;
   width: 100vw;
@@ -24,17 +59,17 @@ body {
 }
 
 .title span {
-  color: #e81b24;
+  color: var(--color-highlight);
 }
 
 .footer {
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 1rem;
   text-align: center;
 }
 
 footer .link {
-  color: #6c79d6;
+  color: var(--color-purple);
   font-size: 0.95rem;
 }
 
