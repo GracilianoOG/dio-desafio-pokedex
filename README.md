@@ -1,12 +1,12 @@
-# 📟 Pokedex
+# 🐱 Pokedex
 
 ## 📃 Descrição
 
-Este projeto é baseado em uma _Pokedex_, que mostra todos os Pokemons da primeira geração. A requisição é feita através da `fetch API`, utilizando a API `pokeapi.co`.
+Este projeto é baseado em uma _Pokédex_, que mostra todos os Pokémons da primeira geração. A requisição é efetuado utilizando a `fetch API`, consumindo a API `pokeapi.co` para trazer as informações dos Pokémons. Esse foi o resultado do desafio fornecido na plataforma da [DIO.me](dio.me).
 
-## 💻 Conteúdos abordados
+## 📝 Anotações
 
-Este projeto foi feito seguindo os cursos **Criando um Projeto com HTML/CSS para Listagem de Pokémon** e **Dominando o Protocolo HTTP e Integrando com a PokeAPI**.
+### Aprendizados
 
 - **CSS**
   - A importância do `normalize CSS`
@@ -24,21 +24,25 @@ Este projeto foi feito seguindo os cursos **Criando um Projeto com HTML/CSS para
   - `Request Body` que é o corpo de alguns tipos de requisição
   - `Status Code` que indica o que houve com a requisição
 
-## 🖼️ Imagem do site
-
-Veja como o site ficou, ao vivo, [clicando aqui](https://gracilianoog.github.io/dio-desafio-pokedex/ "Visitar o site da Pokedex").
+## 🖼️ Imagem do site (desatualizada)
 
 ![Imagem do site com alguns Pokemons](./assets/images/index-screenshot.png)
 
-## 📌 Mais informações
+## ✨ Atualizações
 
-Este projeto faz parte da trilha de Javascript do bootcamp **NTT DATA Diversidade em Tech** da **Digital Innovation One**. O mesmo projeto postado no Github foi entregue, como pedido, na plataforma da DIO.
+- O código do site foi polido, incluíndo refatorações e correção de bugs.
+- O design da página e dos cards foi melhorado, com a adição de novas animações, interações e cores.
+- Agora é possível navegar por todo o site utilizando apenas o teclado.
+- Favicon de uma Pokébola adicionado.
 
 ## 🔗 Links
 
 - [Digital Innovation One](https://www.dio.me/)
 - [Fetch API | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- [Ícone Pokébola colorida](https://www.svgrepo.com/svg/276264/pokeball-pokemon)
+- [Ícone Pokébola preta](https://www.svgrepo.com/svg/370529/pokeball)
+- [Ícone LinkedIn](https://www.svgrepo.com/svg/106639/linkedin-logo)
+- [Ícone Repositório](https://www.svgrepo.com/svg/358746/repository-submodule)
+- [Ícone GitHub](https://www.svgrepo.com/svg/503359/github)
 - [Pokeapi](https://pokeapi.co/)
-- [Pokébola colorida](https://www.svgrepo.com/svg/276264/pokeball-pokemon)
-- [Pokébola preta](https://www.svgrepo.com/svg/370529/pokeball)
 - [Repositório base do projeto](https://github.com/digitalinnovationone/js-developer-pokedex)
