@@ -68,9 +68,21 @@ body {
   text-align: center;
 }
 
-footer .link {
-  color: var(--color-purple);
-  font-size: 0.95rem;
+.footer .contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.footer .link img {
+  transition: transform 0.25s;
+  width: 35px;
+}
+
+.footer .link img:hover {
+  transform: scale(1.08);
 }
 
 @media screen and (min-width: 1024px) {
