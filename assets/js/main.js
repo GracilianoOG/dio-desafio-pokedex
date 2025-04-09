@@ -11,18 +11,20 @@ const createPokemonElement = pokemon => {
   const { name, number, type, types, photo } = pokemon;
 
   return `
-    <li class="pokemon ${type}" data-id="${number}">
-      <span class="number">#${number}</span>
-      <h2 class="name">${name}</h2>
-      <div class="detail">
-        <ol class="types">
-          ${types
-            .map(pType => `<li class="type ${pType}">${pType}</li>`)
-            .join("")}
-        </ol>
+    <li>
+      <button class="pokemon ${type}" data-id="${number}">
+        <span class="number">#${number}</span>
+        <h2 class="name">${name}</h2>
+        <div class="detail">
+          <ol class="types">
+            ${types
+              .map(pType => `<li class="type ${pType}">${pType}</li>`)
+              .join("")}
+          </ol>
 
-        <img loading="lazy" src="${photo}" alt="${name}">
-      </div>
+          <img loading="lazy" src="${photo}" alt="${name}">
+        </div>
+      </button>
     </li>
 `;
 };
