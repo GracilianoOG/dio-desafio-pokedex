@@ -88,12 +88,12 @@
 }
 
 .pokemon.selected {
-  height: 500px;
+  height: min(500px, 90%);
   left: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
   top: 50%;
-  width: 300px;
+  width: min(300px, 90%);
   z-index: 2;
 }
 
@@ -162,6 +162,12 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-height: 576px) and (orientation: landscape) {
+  .pokemon.selected {
+    width: min(500px, 90%);
   }
 }
 
