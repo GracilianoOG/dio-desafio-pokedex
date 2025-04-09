@@ -30,11 +30,16 @@ const createPokemonElement = pokemon => {
 };
 
 const loadPokemonItens = async (offset, limit) => {
-  const pokemons = (await pokeApi.getPokemons(offset, limit)) ?? [];
-  const pokemonCards = pokemons.map(pokemon => createPokemonElement(pokemon));
-  pokemonList.innerHTML += pokemonCards.join("");
-  loadMoreButton.disabled = false;
-  loadMoreButton.textContent = loadMoreButton.dataset.ready;
+  try {
+    const pokemons = await pokeApi.getPokemons(offset, limit);
+    const pokemonCards = pokemons.map(pokemon => createPokemonElement(pokemon));
+    pokemonList.innerHTML += pokemonCards.join("");
+  } catch (err) {
+    console.error("Erro ao carregar os Pokémons na tela: " + err);
+  } finally {
+    loadMoreButton.disabled = false;
+    loadMoreButton.textContent = loadMoreButton.dataset.ready;
+  }
 };
 
 const loadMorePokemons = () => {
