@@ -26,7 +26,8 @@
   width: 100%;
 }
 
-.pokemon:hover {
+.pokemon:hover,
+.pokemon:focus {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
   transform: scale(1.05);
 }
@@ -137,7 +138,8 @@
   transition: transform 300ms, background-color 300ms;
 }
 
-.pagination button:hover {
+.pagination button:hover,
+.pagination button:focus {
   background-color: #fff;
   color: #6c79d6;
   cursor: pointer;
