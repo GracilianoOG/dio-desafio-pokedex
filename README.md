@@ -43,6 +43,6 @@ Este projeto é baseado em uma _Pokédex_, que mostra todos os Pokémons da prim
 - [Ícone Pokébola preta](https://www.svgrepo.com/svg/370529/pokeball)
 - [Ícone LinkedIn](https://www.svgrepo.com/svg/106639/linkedin-logo)
 - [Ícone Repositório](https://www.svgrepo.com/svg/358746/repository-submodule)
-- [Ícone GitHub](https://www.svgrepo.com/svg/503359/github)
+- [Ícone GitHub](https://www.svgrepo.com/svg/512317/github-142)
 - [Pokeapi](https://pokeapi.co/)
 - [Repositório base do projeto](https://github.com/digitalinnovationone/js-developer-pokedex)
