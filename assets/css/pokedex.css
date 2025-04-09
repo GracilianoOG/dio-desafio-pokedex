@@ -98,6 +98,8 @@
 }
 
 .pokemon.selected img {
+  animation: appear 0.8s;
+  animation-play-state: running;
   filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.35));
   height: 250px;
   left: 50%;
@@ -144,6 +146,23 @@
   color: #6c79d6;
   cursor: pointer;
   transform: scale(1.025);
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+    translate: 30px;
+  }
+
+  60% {
+    scale: 1;
+    translate: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 460px) {
