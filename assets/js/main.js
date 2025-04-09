@@ -58,14 +58,7 @@ const loadMorePokemons = () => {
   loadMoreButton.parentElement.removeChild(loadMoreButton);
 };
 
-loadMoreButton.addEventListener("click", loadMorePokemons);
-
-pokemonModal.addEventListener("click", e => {
-  if (e.target !== e.currentTarget) return;
-  pokemonModal.classList.toggle("hidden");
-});
-
-pokemonList.addEventListener("click", e => {
+const showCardDetails = e => {
   const card = e.target.closest(".pokemon");
   if (!card) return;
   const selectedCard = pokemonList.querySelector(
@@ -73,6 +66,14 @@ pokemonList.addEventListener("click", e => {
   );
   if (selectedCard) selectedCard.classList.remove("selected");
   card.classList.toggle("selected");
+};
+
+loadMoreButton.addEventListener("click", loadMorePokemons);
+pokemonList.addEventListener("click", showCardDetails);
+
+pokemonModal.addEventListener("click", e => {
+  if (e.target !== e.currentTarget) return;
+  pokemonModal.classList.toggle("hidden");
 });
 
 loadPokemonItens(offset, limit);
