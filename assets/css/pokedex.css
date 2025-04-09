@@ -1,5 +1,6 @@
 .pokemons {
   display: grid;
+  gap: 1rem;
   grid-template-columns: 1fr;
   list-style: none;
   margin: 0 0 2rem;
@@ -12,14 +13,17 @@
   background-position: center;
   background-size: contain;
   background-blend-mode: soft-light;
+  border: none;
   border-radius: 1rem;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  margin: 0.5rem;
+  height: 100%;
   padding: 1rem;
   position: relative;
   transition: box-shadow 0.25s, transform 0.25s;
+  text-align: left;
+  width: 100%;
 }
 
 .pokemon:hover {
