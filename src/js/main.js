@@ -37,7 +37,7 @@ const loadPokemonItens = async (offset, limit) => {
     pokemonList.innerHTML += pokemonCards.join("");
   } catch ({ name, message }) {
     showModal(name, message);
-    console.error(`Erro ao carregar os Pokémons na tela: ${message}`);
+    console.error(`Erro "${name}" ao carregar os Pokémons na tela: ${message}`);
   } finally {
     loadMoreButton.disabled = false;
     loadMoreButton.textContent = loadMoreButton.dataset.ready;

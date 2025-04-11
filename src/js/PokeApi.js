@@ -20,7 +20,7 @@ class PokeApi {
       return this.convertPokeApiDetailToPokemon(pokeDetail);
     } catch ({ name, message }) {
       showModal(name, message);
-      console.error(`Erro ao buscar detalhes do Pokemón: ${message}`);
+      console.error(`Erro "${name}" ao buscar detalhes do Pokemón: ${message}`);
     }
   }
 
@@ -38,7 +38,7 @@ class PokeApi {
       return pokemonDetails;
     } catch ({ name, message }) {
       showModal(name, message);
-      console.error(`Erro ao buscar Pokemóns: ${message}`);
+      console.error(`Erro "${name}" ao buscar Pokemóns: ${message}`);
     }
   }
 }
