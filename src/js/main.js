@@ -78,4 +78,8 @@ pokemonModal.addEventListener("click", e => {
   pokemonModal.classList.add("hidden");
 });
 
+pokemonModal.querySelector("#modalClose").addEventListener("click", () => {
+  pokemonModal.classList.add("hidden");
+});
+
 loadPokemonItens(offset, limit);
