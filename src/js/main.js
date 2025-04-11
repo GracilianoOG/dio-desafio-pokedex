@@ -1,4 +1,4 @@
-import { showModal } from "./modal.js";
+import { closeModal, showModal } from "./modal.js";
 import { pokeApi } from "./PokeApi.js";
 
 const pokemonList = document.getElementById("pokemonList");
@@ -75,11 +75,9 @@ pokemonList.addEventListener("click", showCardDetails);
 
 pokemonModal.addEventListener("click", e => {
   if (e.target !== e.currentTarget) return;
-  pokemonModal.classList.add("hidden");
+  closeModal();
 });
 
-pokemonModal.querySelector("#modalClose").addEventListener("click", () => {
-  pokemonModal.classList.add("hidden");
-});
+pokemonModal.querySelector("#modalClose").addEventListener("click", closeModal);
 
 loadPokemonItens(offset, limit);
