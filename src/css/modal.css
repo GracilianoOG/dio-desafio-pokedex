@@ -33,6 +33,22 @@
   text-align: justify;
 }
 
+.modal .close {
+  border: none;
+  background-color: transparent;
+  color: #222438;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.modal .close:hover {
+  color: var(--color-highlight);
+}
+
 .modal.hidden {
   display: none;
 }
