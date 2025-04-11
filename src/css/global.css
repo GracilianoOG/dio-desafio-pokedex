@@ -88,7 +88,8 @@ body {
 @media screen and (min-width: 1024px) {
   .content {
     border-radius: 1rem;
-    max-width: 1024px;
+    max-width: 1200px;
     margin: 3rem auto;
+    padding: 2rem;
   }
 }
