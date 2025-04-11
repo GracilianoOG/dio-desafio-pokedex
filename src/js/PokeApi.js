@@ -1,3 +1,4 @@
+import { showModal } from "./modal.js";
 import { Pokemon } from "./models/Pokemon.js";
 
 class PokeApi {
@@ -17,8 +18,9 @@ class PokeApi {
         throw new Error("Erro HTTP! Status: " + response.status);
       const pokeDetail = await response.json();
       return this.convertPokeApiDetailToPokemon(pokeDetail);
-    } catch (err) {
-      console.error("Erro ao buscar detalhes do Pokemón: " + err);
+    } catch ({ name, message }) {
+      showModal(name, message);
+      console.error(`Erro ao buscar detalhes do Pokemón: ${message}`);
     }
   }
 
@@ -34,8 +36,9 @@ class PokeApi {
       const pokemonDetails = Promise.all(detailRequests);
 
       return pokemonDetails;
-    } catch (err) {
-      console.error("Erro ao buscar Pokemóns: " + err);
+    } catch ({ name, message }) {
+      showModal(name, message);
+      console.error(`Erro ao buscar Pokemóns: ${message}`);
     }
   }
 }

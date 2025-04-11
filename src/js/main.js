@@ -1,3 +1,4 @@
+import { showModal } from "./modal.js";
 import { pokeApi } from "./PokeApi.js";
 
 const pokemonList = document.getElementById("pokemonList");
@@ -34,8 +35,9 @@ const loadPokemonItens = async (offset, limit) => {
     const pokemons = await pokeApi.getPokemons(offset, limit);
     const pokemonCards = pokemons.map(pokemon => createPokemonElement(pokemon));
     pokemonList.innerHTML += pokemonCards.join("");
-  } catch (err) {
-    console.error("Erro ao carregar os Pokémons na tela: " + err);
+  } catch ({ name, message }) {
+    showModal(name, message);
+    console.error(`Erro ao carregar os Pokémons na tela: ${message}`);
   } finally {
     loadMoreButton.disabled = false;
     loadMoreButton.textContent = loadMoreButton.dataset.ready;
