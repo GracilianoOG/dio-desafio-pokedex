@@ -13,36 +13,24 @@
   background-color: #fff;
   border-radius: 15px;
   color: #222438;
-  min-height: 600px;
-  overflow: hidden;
+  min-height: 300px;
   padding: 2rem;
   position: relative;
-  text-align: center;
-  width: 370px;
+  width: 500px;
 }
 
-.modal .header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.modal .details {
-  border-radius: 20px;
-  display: flex;
-  padding: 20px;
-  height: 250px;
-}
-
-.modal .photo {
-  border-radius: 25px;
-  display: block;
-  max-height: 100%;
-  width: 100%;
-}
-
-.modal .name {
+.modal .title {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.313rem;
   text-transform: capitalize;
+  text-align: left;
+}
+
+.modal .description {
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: justify;
 }
 
 .modal.hidden {
