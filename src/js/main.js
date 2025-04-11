@@ -36,8 +36,9 @@ const loadPokemonItens = async (offset, limit) => {
     const pokemonCards = pokemons.map(pokemon => createPokemonElement(pokemon));
     pokemonList.innerHTML += pokemonCards.join("");
   } catch ({ name, message }) {
-    showModal(name, message);
-    console.error(`Erro "${name}" ao carregar os Pokémons na tela: ${message}`);
+    const msg = `Erro "${name}" ao carregar os Pokémons na tela: ${message}`;
+    showModal(name, msg);
+    console.error(msg);
   } finally {
     loadMoreButton.disabled = false;
     loadMoreButton.textContent = loadMoreButton.dataset.ready;
