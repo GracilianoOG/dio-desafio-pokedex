@@ -73,7 +73,7 @@ pokemonList.addEventListener("click", showCardDetails);
 
 pokemonModal.addEventListener("click", e => {
   if (e.target !== e.currentTarget) return;
-  pokemonModal.classList.toggle("hidden");
+  pokemonModal.classList.add("hidden");
 });
 
 loadPokemonItens(offset, limit);
