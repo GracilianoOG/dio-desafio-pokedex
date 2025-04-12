@@ -26,7 +26,7 @@ Este projeto é baseado em uma _Pokédex_, que mostra todos os Pokémons da prim
 
 ## 🖼️ Imagem do site (desatualizada)
 
-![Imagem do site com alguns Pokemons](./assets/images/index-screenshot.png)
+![Imagem do site com alguns Pokemons](./src/assets/images/index-screenshot.png)
 
 ## ✨ Atualizações
 
