@@ -3,12 +3,12 @@ import { Pokemon } from "./models/Pokemon.js";
 
 class PokeApi {
   convertPokeApiDetailToPokemon(details) {
-    const { name, id, types, sprites } = details;
+    const { name, id, types, sprites, height, weight } = details;
     const typeNames = types.map(typeSlot => typeSlot.type.name);
     const [type] = typeNames;
     const photo = sprites.other.dream_world.front_default;
 
-    return new Pokemon(name, id, type, typeNames, photo);
+    return new Pokemon(name, id, type, typeNames, photo, height, weight);
   }
 
   async getPokemonDetail(pokemon) {
