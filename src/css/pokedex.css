@@ -81,9 +81,29 @@
   text-align: center;
 }
 
-.pokemon .detail img {
+.pokemon .detail .avatar {
   height: 70px;
   max-width: 100%;
+}
+
+.pokemon .extra {
+  display: none;
+}
+
+.pokemon .extra .info {
+  align-items: center;
+  color: var(--color-white);
+  display: flex;
+  gap: 4px;
+  margin: 0;
+}
+
+.pokemon .extra .info img {
+  width: 30px;
+}
+
+.pokemon .extra .info:first-child {
+  margin-bottom: 8px;
 }
 
 .pokemon.selected {
@@ -96,7 +116,7 @@
   z-index: 2;
 }
 
-.pokemon.selected img {
+.pokemon.selected .avatar {
   animation: appear 0.8s;
   animation-play-state: running;
   filter: drop-shadow(10px 10px 5px var(--color-poke-shadow));
@@ -117,6 +137,10 @@
 .pokemon.selected .types {
   display: flex;
   gap: 8px;
+}
+
+.pokemon.selected .extra {
+  display: initial;
 }
 
 .pagination {
