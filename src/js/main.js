@@ -9,7 +9,7 @@ const limit = 10;
 let offset = 0;
 
 const createPokemonElement = pokemon => {
-  const { name, number, type, types, photo } = pokemon;
+  const { name, number, type, types, photo, weight, height } = pokemon;
 
   return `
     <li>
@@ -23,7 +23,18 @@ const createPokemonElement = pokemon => {
               .join("")}
           </ol>
 
-          <img loading="lazy" src="${photo}" alt="${name}">
+          <img class="avatar" loading="lazy" src="${photo}" alt="${name}">
+
+          <div class="extra">
+            <p class="info">
+              <img loading="lazy" src="https://www.svgrepo.com/show/315964/scale-weight.svg" alt="Weight">
+              ${(weight / 10).toFixed(1)} KG
+            </p>
+            <p class="info">
+              <img loading="lazy" src="https://www.svgrepo.com/show/411400/measure.svg" alt="Height">
+              ${(height / 10).toFixed(1)} M
+            </p>
+          </div>
         </div>
       </button>
     </li>
